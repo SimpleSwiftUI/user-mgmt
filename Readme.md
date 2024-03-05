@@ -11,13 +11,13 @@ Next time the app is launched, the app reads the `userId` from `UserDefaults`, c
 ## Features
 
 - **Sign in with Apple:** Allows users to authenticate using their Apple ID.
-- **Core Data Integration:** Leverages Core Data for local data management.
+- **Local Data Integration:** Leverages UserDefaults for local data management.
 - **Backend Integration:** Demonstrates how to register and fetch user data from a backend server.
 - **User Feedback:** Provides visual feedback based on the authentication state of the user.
 
 ## Configure Sign in with Apple in Apple Developer
 
-For the simplest approach, do not create an app identifier through the web interface. Instead, when you create your app in XCode, navigate to Project Navigator (left panel) > <project name> (top element) > <project name> under Targets > Signing & Capabilities > Add Capability (+ icon (top left)) > Sign in with Apple.  
+For the simplest approach, do not create an app identifier through the web interface. Instead, when you create your app in XCode, navigate to Project Navigator (left panel) > [project name] (top element) > [project name] under Targets > Signing & Capabilities > Add Capability (+ icon (top left)) > Sign in with Apple.  
 
 When you do this, XCode will automatically create an identifier in [Apple Developer Certificates, Identifiers & Profiles](https://developer.apple.com/account/resources/identifiers/list).
 
@@ -50,7 +50,7 @@ ViewModel serves as the core logic handler for Sign in with Apple, including con
 ### AppleUser.swift
 
 AppleUser is a model that represents a user authenticated via Apple ID. It includes properties for user ID, first name, last name, and email.
-Backend Integration
+
 
 ## Usage
 
