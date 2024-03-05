@@ -6,7 +6,7 @@ When the app launches, it checks if the user has an account already; if so, it d
 
 Next time the app is launched, the app reads the `userId` from `UserDefaults`, calls `get-user` on the backend and populates the `AppleUser` variable with the user's data. The name from the `AppleUser` variable is used to populate the welcome message.
 
-![user-mgmt screen capture](screen-capture/user-mgmt.gifv)
+![user-mgmt screen capture](screen-capture/user-mgmt.gif)
 
 ## Features
 
