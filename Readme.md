@@ -2,9 +2,9 @@
 
 This project demonstrates how to implement `Sign in with Apple` in a SwiftUI application. The example app, named `user-mgmt`, includes user authentication and management using SwiftUI and AuthenticationServices. 
 
-When the app launches, it checks if the user has an account already; if so, it displays "Welcome <first name>"; if not, it displays the `Sign in with Apple` button. When the user taps the button, a sheet is shown where the user can choose to share their name and/or email. Once signed in, the userId, name, and email are temporarily stored in `UserDefaults`. The app then calls a backend API (simple Vercel dummy API; see [user-mgmt-backend](https://github.com/SimpleSwiftUI/user-mgmt-backend/tree/main) repo). The backend registers the user's email and name into a (dummy) database. When the app receives the success response that the user has been registered with the backend, it deletes the name and email from `UserDefaults` for security reasons. 
+When the app launches, it checks if the user has an account already; if so, it displays "Welcome [first name]"; if not, it displays the `Sign in with Apple` button. When the user taps the button, a sheet is shown where the user can choose to share their name and/or email. Once signed in, the Apple `userId`, `name`, and `email` are temporarily stored in `UserDefaults`. The app then calls a backend API (simple Vercel dummy API; see [user-mgmt-backend](https://github.com/SimpleSwiftUI/user-mgmt-backend/tree/main) repo). The backend registers the user's email and name into a (dummy) database. When the app receives the success response that the user has been registered with the backend, it deletes the name and email from `UserDefaults` for security reasons. 
 
-Next time the app is launched, the app reads the `userId` from `UserDefaults`, calls `get-user` on the backend and populates the `AppleUser` variable with the user's data. The name from the `AppleUser` variable is used to populate the welcome message.
+Next time the app is launched, the app reads the `userId` from `UserDefaults`, calls `get-user` on the backend and populates the `appleUser` variable with the user's (dummy) data. The name from the `appleUser` variable is used to populate the welcome message.
 
 ![user-mgmt screen capture](screen-capture/user-mgmt.gif)
 
