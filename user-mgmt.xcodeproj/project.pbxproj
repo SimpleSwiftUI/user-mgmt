@@ -13,6 +13,8 @@
 		68FF30C62B97809B0001B735 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68FF30C52B97809B0001B735 /* Preview Assets.xcassets */; };
 		68FF30C82B97809B0001B735 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FF30C72B97809B0001B735 /* Persistence.swift */; };
 		68FF30CB2B97809B0001B735 /* user_mgmt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 68FF30C92B97809B0001B735 /* user_mgmt.xcdatamodeld */; };
+		68FF30D72B9783230001B735 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FF30D62B9783230001B735 /* ViewModel.swift */; };
+		68FF30D92B9786AD0001B735 /* AppleUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FF30D82B9786AD0001B735 /* AppleUserModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,9 @@
 		68FF30C52B97809B0001B735 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		68FF30C72B97809B0001B735 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		68FF30CA2B97809B0001B735 /* user_mgmt.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = user_mgmt.xcdatamodel; sourceTree = "<group>"; };
+		68FF30D12B9780D60001B735 /* user-mgmt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "user-mgmt.entitlements"; sourceTree = "<group>"; };
+		68FF30D62B9783230001B735 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		68FF30D82B9786AD0001B735 /* AppleUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleUserModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +60,12 @@
 		68FF30BD2B9780990001B735 /* user-mgmt */ = {
 			isa = PBXGroup;
 			children = (
-				68FF30BE2B9780990001B735 /* user_mgmtApp.swift */,
-				68FF30C02B9780990001B735 /* ContentView.swift */,
+				68FF30D52B97830A0001B735 /* App */,
+				68FF30D42B9783030001B735 /* ViewModel */,
+				68FF30D32B9782FF0001B735 /* Model */,
+				68FF30D22B9782FB0001B735 /* View */,
+				68FF30D12B9780D60001B735 /* user-mgmt.entitlements */,
 				68FF30C22B97809B0001B735 /* Assets.xcassets */,
-				68FF30C72B97809B0001B735 /* Persistence.swift */,
-				68FF30C92B97809B0001B735 /* user_mgmt.xcdatamodeld */,
 				68FF30C42B97809B0001B735 /* Preview Content */,
 			);
 			path = "user-mgmt";
@@ -71,6 +77,40 @@
 				68FF30C52B97809B0001B735 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		68FF30D22B9782FB0001B735 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				68FF30C02B9780990001B735 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		68FF30D32B9782FF0001B735 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				68FF30C72B97809B0001B735 /* Persistence.swift */,
+				68FF30C92B97809B0001B735 /* user_mgmt.xcdatamodeld */,
+				68FF30D82B9786AD0001B735 /* AppleUserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		68FF30D42B9783030001B735 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				68FF30D62B9783230001B735 /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		68FF30D52B97830A0001B735 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				68FF30BE2B9780990001B735 /* user_mgmtApp.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,8 +183,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68FF30D72B9783230001B735 /* ViewModel.swift in Sources */,
 				68FF30C82B97809B0001B735 /* Persistence.swift in Sources */,
 				68FF30CB2B97809B0001B735 /* user_mgmt.xcdatamodeld in Sources */,
+				68FF30D92B9786AD0001B735 /* AppleUserModel.swift in Sources */,
 				68FF30C12B9780990001B735 /* ContentView.swift in Sources */,
 				68FF30BF2B9780990001B735 /* user_mgmtApp.swift in Sources */,
 			);
@@ -277,6 +319,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "user-mgmt/user-mgmt.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"user-mgmt/Preview Content\"";
@@ -306,6 +349,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "user-mgmt/user-mgmt.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"user-mgmt/Preview Content\"";
